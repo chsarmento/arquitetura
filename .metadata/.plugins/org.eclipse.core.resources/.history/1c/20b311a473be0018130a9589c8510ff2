@@ -1,0 +1,21 @@
+package br.pucminas.arquiteturaBackend.bibliotecaAPI;
+
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode
+@ToString
+@Getter
+@Setter
+public class Cliente {
+
+	private long id;
+	private String content;
+
+}

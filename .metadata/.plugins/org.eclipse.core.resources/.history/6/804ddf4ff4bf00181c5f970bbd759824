@@ -1,0 +1,65 @@
+package br.pucminas.arquiteturaBackend.bibliotecaAPI;
+
+import java.util.Collections;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import springfox.documentation.builders.PathSelectors;
+import springfox.documentation.builders.RequestHandlerSelectors;
+import springfox.documentation.service.ApiInfo;
+import springfox.documentation.service.Contact;
+import springfox.documentation.spi.DocumentationType;
+import springfox.documentation.spring.web.plugins.Docket;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
+@Configuration
+@EnableSwagger2
+public class SwaggerConfig {
+
+	@Bean
+	public Docket api() {
+		return new Docket(DocumentationType.SWAGGER_2).select().apis(RequestHandlerSelectors.any())
+				.paths(PathSelectors.any()).build().apiInfo(apiInfo());
+
+	}
+
+	private ApiInfo apiInfo() {
+		return new ApiInfo("Livraria virtual REST API", "O \r\n" + 
+				"seu \r\n" + 
+				"objetivo \r\n" + 
+				"é \r\n" + 
+				"implementar \r\n" + 
+				"uma \r\n" + 
+				"API \r\n" + 
+				"para \r\n" + 
+				"a \r\n" + 
+				"gestão \r\n" + 
+				"de \r\n" + 
+				"uma \r\n" + 
+				"livraria \r\n" + 
+				"virtual. \r\n" + 
+				"Uma \r\n" + 
+				"livraria \r\n" + 
+				"virtual deve ter pelo menos funcionalidades para:\r\n" + 
+				"\r\n" + 
+				"Cadastro de novos livros\r\n" + 
+				"\r\n" + 
+				"Cadastro de autores\r\n" + 
+				"\r\n" + 
+				"Cadastro de editoras\r\n" + 
+				"\r\n" + 
+				"Pesquisa de livros por critérios diversos.\r\n" + 
+				"\r\n" + 
+				"Postar comentários para livros\r\n" + 
+				"\r\n" + 
+				"Manipular um carrinho de compras\r\n" + 
+				"\r\n" + 
+				"Realizar pedidos\r\n" + 
+				"\r\n" + 
+				"Acompanhamento o status das entregas realizadas.", "API", "Terms of service",
+				new Contact("Christopher Sarmento", "www.pucminas.com.br", "chsarmento@gmail.com"), "License of API",
+				"API license URL", Collections.emptyList());
+	}
+
+}

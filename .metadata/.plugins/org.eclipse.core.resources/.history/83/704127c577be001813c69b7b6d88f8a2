@@ -1,0 +1,45 @@
+package br.pucminas.arquiteturaBackend.bibliotecaAPI;
+
+import java.io.Serializable;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor @AllArgsConstructor
+public class Cliente implements Serializable {
+
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private Long id;
+	private String content;
+	
+	public Cliente(Long id, String content) {
+		super();
+		this.id = id;
+		this.content = content;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getContent() {
+		return content;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
+	}
+	
+	
+
+}

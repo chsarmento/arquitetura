@@ -1,0 +1,14 @@
+package br.pucminas.arquiteturaBackend.bibliotecaAPI;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor @AllArgsConstructor
+public class Livro  {
+
+	private Long id;
+	private String content;
+	
+}

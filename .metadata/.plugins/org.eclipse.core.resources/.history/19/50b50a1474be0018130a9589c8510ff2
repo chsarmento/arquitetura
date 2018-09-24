@@ -1,0 +1,11 @@
+package br.pucminas.arquiteturaBackend.bibliotecaAPI;
+
+import lombok.Data;
+
+@Data
+public class Cliente {
+
+	private long id;
+	private String content;
+
+}

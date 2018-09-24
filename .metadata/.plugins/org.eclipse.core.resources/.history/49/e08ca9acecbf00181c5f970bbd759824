@@ -1,0 +1,16 @@
+package br.pucminas.arquiteturaBackend.bibliotecaAPI.enums;
+
+import lombok.Data;
+
+@Data
+public enum EnumSituacaoPedido {
+
+	GERACAO_DE_TAXA("GT", "Geração de taxa"),
+    VERIFICA_FECHAMENTO("VF", "Verificação de fechamento"),
+    CRITICAS_FECHAMENTO("CF", "Criticas de fechamento"),
+    ;
+	
+	public String tipo;
+	public String descricao;
+
+}

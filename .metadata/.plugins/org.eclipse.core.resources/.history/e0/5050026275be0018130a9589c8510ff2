@@ -1,0 +1,17 @@
+package br.pucminas.arquiteturaBackend.bibliotecaAPI;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor @AllArgsConstructor
+public class Cliente {
+
+	public Cliente(Long i, String string) {
+		// TODO Auto-generated constructor stub
+	}
+	private Long id;
+	private String content;
+
+}
